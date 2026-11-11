@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LeadBoy — Des prospects qualifiés, chaque mois</title>
+  <meta name="description" content="LeadBoy génère des prospects qualifiés pour les entreprises de services. Publicités ciblées, pages, qualification et livraison. Un forfait mensuel, un volume régulier.">
+  <meta name="theme-color" content="#001854">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      document.documentElement.classList.add("reduce");
+    }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#contenu">Aller au contenu</a>
+  <header class="site-header">
+    <div class="bar wrap">
+      <a class="brand" href="#top">
+        <img src="assets/brand/logo.png" alt="LeadBoy" width="440" height="126">
+      </a>
+      <nav id="nav" class="nav" aria-label="Sections">
+        <a href="#services">Services</a>
+        <a href="#offre">Offre</a>
+        <a href="#pour-qui">Pour qui</a>
+        <a href="#methode">Méthode</a>
+        <a class="nav-mobile-cta" href="#contact">Demander un appel</a>
+      </nav>
+      <a class="btn btn-primary nav-cta" href="#contact">Demander un appel</a>
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+    </div>
+  </header>
+
+  <main id="contenu">
+    <section class="hero wrap" id="top" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="kicker">01 — Agence de prospects qualifiés</p>
+        <h1 id="hero-title">Tes prochains<br>clients arrivent<br><em>déjà intéressés.</em></h1>
+        <p class="lede">LeadBoy amène un flux régulier de rendez-vous aux entreprises de services. Des gens qui ont besoin de ce que tu vends. Pas d'appels à froid. Pas une liste de noms.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#contact">
+            Demander un appel
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a class="btn btn-ghost" href="#methode">Voir la méthode</a>
+        </div>
+      </div>
+
+      <div class="stage-wrap">
+        <div class="stage" id="stage" tabindex="0" role="region" aria-roledescription="diaporama" aria-label="Scénario en six temps. Flèches pour avancer, espace pour la lecture quand le cadre est sélectionné.">
+          <div class="film" aria-hidden="true">
+            <div class="beat is-on" data-beat="0">
+              <div class="layer"><img src="assets/brand/scenes/scene-01.png" alt=""></div>
+            </div>
+            <div class="beat" data-beat="1">
+              <div class="layer"><img src="assets/brand/scenes/scene-02.png" alt=""></div>
+            </div>
+            <div class="beat" data-beat="2">
+              <div class="layer"><img src="assets/brand/scenes/scene-03.png" alt=""></div>
+            </div>
+            <div class="beat" data-beat="3">
+              <div class="layer"><img src="assets/brand/scenes/scene-04.png" alt=""></div>
+            </div>
+            <div class="beat" data-beat="4">
+              <div class="layer"><img src="assets/brand/scenes/scene-05.png" alt=""></div>
+            </div>
+            <div class="beat" data-beat="5">
+              <div class="layer"><img src="assets/brand/scenes/scene-06.png" alt=""></div>
+            </div>
+          </div>
+
+          <div class="stage-caption">
+            <p class="cap-kicker">
+              <span id="cap-index">01</span>
+              <span class="cap-rule" aria-hidden="true"></span>
+              <span id="cap-title">Un nouveau prospect</span>
+            </p>
+            <p id="cap-status" class="vh" aria-live="polite"></p>
+          </div>
+          <div class="progress" aria-hidden="true"><span></span></div>
+          <div class="stage-controls">
+            <button class="icon-btn" id="prev" type="button" aria-label="Temps précédent">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 6 L8 12 L14 18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="dots" role="tablist" aria-label="Temps du scénario">
+              <button type="button" role="tab" aria-selected="true" aria-label="01 Un nouveau prospect">01</button>
+              <button type="button" role="tab" aria-selected="false" tabindex="-1" aria-label="02 L'appel">02</button>
+              <button type="button" role="tab" aria-selected="false" tabindex="-1" aria-label="03 Rendez-vous fixé">03</button>
+              <button type="button" role="tab" aria-selected="false" tabindex="-1" aria-label="04 La présentation">04</button>
+              <button type="button" role="tab" aria-selected="false" tabindex="-1" aria-label="05 Marché conclu">05</button>
+              <button type="button" role="tab" aria-selected="false" tabindex="-1" aria-label="06 Ça grandit">06</button>
+            </div>
+            <button class="icon-btn" id="next" type="button" aria-label="Temps suivant">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 6 L16 12 L10 18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <button class="icon-btn" id="play" type="button" aria-pressed="true" aria-label="Mettre le scénario en pause">
+              <svg class="icon-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3v14H7zM14 5h3v14h-3z" fill="currentColor"/></svg>
+              <svg class="icon-play" viewBox="0 0 24 24" aria-hidden="true" hidden><path d="M8 5l11 7-11 7z" fill="currentColor"/></svg>
+            </button>
+          </div>
+        </div>
+        <p class="stage-hint">Clique l'image, défile dessus, ou utilise les flèches. Le scénario tourne en boucle.</p>
+      </div>
+    </section>
+
+    <section class="band" id="services" aria-labelledby="services-title">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="kicker">02 — Ce qu'on fait</p>
+          <div>
+            <h2 id="services-title">Cinq pièces. Un système.</h2>
+            <p>Rien de vague. Voici ce qui tourne pour toi, et ce que tu peux suivre.</p>
+          </div>
+        </div>
+        <div class="ledger">
+          <article class="svc">
+            <p class="svc-n">01</p>
+            <div>
+              <h3>Publicités ciblées</h3>
+              <p>On place ton offre devant les gens qui ont besoin du service, sur Facebook, Instagram et Google Ads. Le bon territoire. La bonne intention.</p>
+            </div>
+            <p class="svc-meta">Facebook · Instagram · Google Ads</p>
+          </article>
+          <article class="svc">
+            <p class="svc-n">02</p>
+            <div>
+              <h3>Pages qui convertissent</h3>
+              <p>Une page faite pour ton offre. Le visiteur comprend vite, puis laisse ses coordonnées. Pas une vitrine qui se termine sans suite.</p>
+            </div>
+            <p class="svc-meta">Une page, une offre</p>
+          </article>
+          <article class="svc">
+            <p class="svc-n">03</p>
+            <div>
+              <h3>Qualification automatique</h3>
+              <p>Questions, formulaires, automatisations. Tu reçois les prospects qui correspondent. Les autres restent dehors.</p>
+            </div>
+            <p class="svc-meta">Formulaires et filtres</p>
+          </article>
+          <article class="svc">
+            <p class="svc-n">04</p>
+            <div>
+              <h3>Livraison dans ton système</h3>
+              <p>Courriel, SMS ou CRM. Avec le nom, le moyen de les joindre et le besoin, pendant que c'est encore chaud.</p>
+            </div>
+            <p class="svc-meta">Courriel, SMS ou CRM</p>
+          </article>
+          <article class="svc">
+            <p class="svc-n">05</p>
+            <div>
+              <h3>Optimisation continue</h3>
+              <p>Chaque mois, on regarde le coût par prospect et la qualité. On coupe ce qui gaspille. On pousse ce qui amène des rendez-vous.</p>
+            </div>
+            <p class="svc-meta">Coût et qualité, chaque mois</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="offer" id="offre" aria-labelledby="offre-title">
+      <div class="wrap">
+        <div class="offer-panel">
+          <div>
+            <p class="kicker">03 — L'offre</p>
+            <h2 id="offre-title">Un forfait mensuel. Un volume régulier.</h2>
+            <p>Tu n'achètes pas un coup de pub. Tu as des prospects qualifiés qui entrent de façon continue, pour que tu vendes et que tu serves.</p>
+            <p class="offer-option">Suivi et nurturing en option, si tu veux qu'on reste dans la conversation après le premier contact.</p>
+            <ul class="checks">
+              <li>Campagnes en marche, mois après mois</li>
+              <li>Pages et qualification branchées sur ton offre</li>
+              <li>Prospects livrés avec de quoi les contacter vite</li>
+              <li>Coût par prospect et qualité, lisibles</li>
+              <li>Ajustements avec toi, sur tes chiffres</li>
+            </ul>
+          </div>
+          <div class="offer-art">
+            <img src="assets/brand/laptop-croissance.png" width="786" height="748" alt="Le personnage LeadBoy devant un portable, une courbe qui monte à l'écran.">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" id="pour-qui" aria-labelledby="who-title">
+      <div class="wrap who-grid">
+        <div>
+          <p class="kicker">04 — Pour qui</p>
+          <h2 id="who-title">Pour les entreprises qui veulent grandir sans courir après le monde.</h2>
+          <ul class="who-list">
+            <li>Tu veux une croissance que tu peux prévoir.</li>
+            <li>Tu ne veux plus prospecter à la main.</li>
+            <li>Tu veux des clients qualifiés, pas une liste de noms.</li>
+            <li>Tu veux un système qui tourne sans s'arrêter.</li>
+          </ul>
+          <p class="who-note">Locale, régionale, ou en train de grandir. Service aux entreprises ou aux particuliers.</p>
+        </div>
+        <div class="who-art">
+          <img src="assets/brand/06-croissance.png" width="836" height="931" alt="Le personnage LeadBoy, bras croisés, devant une flèche qui monte.">
+        </div>
+      </div>
+    </section>
+
+    <section class="band band-paper" id="methode" aria-labelledby="method-title">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="kicker">05 — La méthode</p>
+          <div>
+            <h2 id="method-title">Quatre temps. Ensuite, ça roule.</h2>
+            <p>Le même parcours que le film du haut, ramené à ce qu'on fait ensemble.</p>
+          </div>
+        </div>
+        <div class="method-grid">
+          <div class="method-sticky">
+            <div class="mini">
+              <img class="pose is-on" data-pose="appel" src="assets/brand/scenes/scene-02.png" alt="">
+              <img class="pose" data-pose="setup" src="assets/brand/scenes/scene-04.png" alt="">
+              <img class="pose" data-pose="lead" src="assets/brand/scenes/scene-01.png" alt="">
+              <img class="pose" data-pose="grow" src="assets/brand/scenes/scene-06.png" alt="">
+            </div>
+            <div class="mini-caption">
+              <strong id="mini-title">On discute</strong>
+              <span id="mini-text">L'appel qui cadre l'offre, le client idéal, l'objectif.</span>
+            </div>
+          </div>
+          <ol class="steps">
+            <li class="step is-active" data-pose="appel">
+              <span class="step-n">01</span>
+              <h3>On discute</h3>
+              <p>De ton offre, de ton client idéal, de tes objectifs. On part de là, pas d'un modèle générique.</p>
+            </li>
+            <li class="step" data-pose="setup">
+              <span class="step-n">02</span>
+              <h3>On met en place</h3>
+              <p>Les campagnes, les pages, les systèmes de qualification. Le système est branché avant que le premier prospect entre.</p>
+            </li>
+            <li class="step" data-pose="lead">
+              <span class="step-n">03</span>
+              <h3>Les prospects arrivent</h3>
+              <p>De façon régulière. Tu les contactes, tu vends, tu sers. Le volume tient dans le mois, pas dans un coup de chance.</p>
+            </li>
+            <li class="step" data-pose="grow">
+              <span class="step-n">04</span>
+              <h3>On optimise</h3>
+              <p>Ensemble, mois après mois. On regarde ce que ça coûte et ce que ça donne, puis on corrige.</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" id="clarte" aria-labelledby="clarity-title">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="kicker">06 — La clarté</p>
+          <div>
+            <h2 id="clarity-title">Tu sais ce qui entre. Tu sais ce que ça coûte.</h2>
+            <p>Pas de tableau de bord mystère. Un apport que tu peux compter, et les chiffres pour en juger.</p>
+          </div>
+        </div>
+        <div class="sheet">
+          <article>
+            <h3>Ce que tu reçois</h3>
+            <ul>
+              <li>Un prospect déjà intéressé, pas un contact froid</li>
+              <li>Son nom et comment le joindre</li>
+              <li>Le besoin qu'il a nommé</li>
+              <li>La livraison là où tu travailles déjà</li>
+            </ul>
+          </article>
+          <article>
+            <h3>Ce que tu mesures</h3>
+            <ul>
+              <li>Le nombre de prospects</li>
+              <li>Le coût par prospect</li>
+              <li>La part qui passe la qualification</li>
+              <li>Les rendez-vous que ça produit</li>
+            </ul>
+          </article>
+        </div>
+        <p class="clarity-close">Tu sais ce qui entre, ce que ça coûte, et ce que tu peux en faire.</p>
+      </div>
+    </section>
+
+    <section class="band band-paper" id="contact" aria-labelledby="contact-title">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="kicker">07 — Contact</p>
+          <div>
+            <h2 id="contact-title">Parle-nous de ce que tu vends.</h2>
+            <p>Un appel, pas un devis flou. On veut comprendre ton offre, ton client idéal et ton objectif.</p>
+          </div>
+        </div>
+        <div class="contact-grid">
+          <div class="form-card">
+            <form id="demande" novalidate>
+              <div class="field">
+                <label for="nom">Ton nom</label>
+                <input id="nom" name="nom" type="text" autocomplete="name" required>
+                <p class="err" id="err-nom"></p>
+              </div>
+              <div class="field">
+                <label for="entreprise">Ton entreprise</label>
+                <input id="entreprise" name="entreprise" type="text" autocomplete="organization" required>
+                <p class="err"></p>
+              </div>
+              <div class="field field-wide">
+                <label for="service">Le service que tu vends</label>
+                <input id="service" name="service" type="text" required>
+                <p class="err"></p>
+              </div>
+              <div class="field field-wide">
+                <label for="client">Ton client idéal</label>
+                <textarea id="client" name="client" required></textarea>
+                <p class="err"></p>
+              </div>
+              <div class="field field-wide">
+                <label for="objectif">Ton objectif</label>
+                <textarea id="objectif" name="objectif" required></textarea>
+                <p class="err"></p>
+              </div>
+              <div class="field">
+                <label for="courriel">Courriel</label>
+                <input id="courriel" name="courriel" type="email" autocomplete="email" inputmode="email" required>
+                <p class="err"></p>
+              </div>
+              <div class="field">
+                <label for="telephone">Téléphone</label>
+                <input id="telephone" name="telephone" type="tel" autocomplete="tel" inputmode="tel" required>
+                <p class="err"></p>
+              </div>
+              <div class="form-row">
+                <button class="btn btn-primary" type="submit">Envoyer la demande</button>
+                <p class="form-meta"><span id="form-count">0 / 7</span> champs</p>
+              </div>
+              <p class="fine">La demande reste sur cet appareil. Aucun serveur ne la reçoit.</p>
+            </form>
+            <div class="thanks" id="thanks" hidden>
+              <h3 tabindex="-1">C'est noté, <span id="thanks-name"></span>.</h3>
+              <p>Ta demande est enregistrée sur cet appareil. Rien n'a été envoyé. Tu peux la relire ici, ou la modifier.</p>
+              <dl class="recap" id="thanks-recap"></dl>
+              <button class="btn btn-ghost" id="thanks-reset" type="button">Modifier la demande</button>
+            </div>
+          </div>
+          <div class="contact-art">
+            <img src="assets/brand/bureau.png" width="971" height="852" alt="Le personnage LeadBoy à son bureau, avec un portable et un café.">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div class="footer-brand">
+        <img src="assets/brand/logo.png" alt="LeadBoy" width="440" height="126">
+        <p>Prospects qualifiés pour entreprises de services. Québec.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Pied de page">
+        <a href="#services">Services</a>
+        <a href="#offre">Offre</a>
+        <a href="#pour-qui">Pour qui</a>
+        <a href="#methode">Méthode</a>
+        <a href="#clarte">Clarté</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </footer>
+  <script src="js/scene.js"></script>
+  <script src="js/site.js"></script>
+</body>
+</html>
