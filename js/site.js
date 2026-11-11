@@ -73,17 +73,33 @@
     }
   }
 
-  if (steps.length && "IntersectionObserver" in window) {
-    const stepObserver = new IntersectionObserver(
-      (entries) => {
-        const visible = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-        if (visible) activateStep(visible.target);
-      },
-      { rootMargin: "-30% 0px -40% 0px", threshold: [0.25, 0.5, 0.7] }
-    );
-    steps.forEach((step) => stepObserver.observe(step));
+  if (steps.length) {
+    let current = steps[0];
+    let frame = 0;
+
+    function stepAtReadingLine() {
+      const line = Math.min(window.innerHeight * 0.42, 420);
+      let chosen = steps[0];
+      for (const step of steps) {
+        if (step.getBoundingClientRect().top <= line) chosen = step;
+      }
+      return chosen;
+    }
+
+    function onScroll() {
+      if (frame) return;
+      frame = window.requestAnimationFrame(() => {
+        frame = 0;
+        const next = stepAtReadingLine();
+        if (next === current) return;
+        current = next;
+        activateStep(next);
+      });
+    }
+
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
   }
 
   const form = document.getElementById("demande");
@@ -94,20 +110,21 @@
 
   const fields = [...form.querySelectorAll("input, textarea")];
 
+  const required = fields.filter((field) => field.required);
+
   function updateCount() {
-    const done = fields.filter((field) => field.value.trim()).length;
-    count.textContent = done + " / " + fields.length;
+    const done = required.filter((field) => field.value.trim()).length;
+    count.textContent = done + " / " + required.length;
   }
 
   function messageFor(field) {
     const value = field.value.trim();
+    if (!field.required && !value) return "";
     if (!value) {
       const prompts = {
         nom: "Écris ton nom.",
         entreprise: "Écris le nom de ton entreprise.",
-        service: "Dis-nous le service que tu vends.",
-        client: "Décris ton client idéal, même en une phrase.",
-        objectif: "Dis-nous l'objectif que tu vises.",
+        domaine: "Dis-nous le domaine ou le secteur.",
         courriel: "Entre un courriel valide.",
         telephone: "Entre un numéro où on peut te joindre.",
       };
@@ -172,15 +189,16 @@
     const labels = {
       nom: "Nom",
       entreprise: "Entreprise",
-      service: "Service",
-      client: "Client idéal",
-      objectif: "Objectif",
+      site: "Site web",
+      domaine: "Domaine",
       courriel: "Courriel",
       telephone: "Téléphone",
+      autres: "Autres (objectifs)",
     };
     const recap = document.getElementById("thanks-recap");
     recap.replaceChildren();
     Object.keys(labels).forEach((key) => {
+      if (!entry[key]) return;
       const dt = document.createElement("dt");
       dt.textContent = labels[key];
       const dd = document.createElement("dd");

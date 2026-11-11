@@ -500,12 +500,19 @@ a { color: inherit; }
   width: 100%;
   height: 100%;
   object-fit: contain;
-  padding: 0.75rem;
+  object-position: center center;
+  padding: 0.85rem;
   opacity: 0;
-  transition: opacity 0.35s ease;
+  transform: translateY(14px);
+  transition: opacity 0.22s ease, transform 0.22s ease;
 }
-.pose.is-on { opacity: 1; }
+.pose.is-on {
+  opacity: 1;
+  transform: none;
+  transition: opacity 0.48s ease 0.16s, transform 0.55s cubic-bezier(0.16, 0.84, 0.24, 1) 0.12s;
+}
 .mini-caption {
+  min-height: 6.6rem;
   padding: 0.9rem 1rem 1rem;
   border-top: 1px solid var(--line);
 }
@@ -513,10 +520,10 @@ a { color: inherit; }
 .mini-caption span { color: var(--muted); }
 .steps { margin: 0; padding: 0; list-style: none; }
 .step {
-  padding: 1.35rem 0 1.5rem;
+  padding: 1.6rem 0 1.8rem;
   border-top: 1px solid var(--line);
   color: var(--muted);
-  min-height: 28vh;
+  min-height: 46vh;
 }
 .step:last-child { border-bottom: 1px solid var(--line); }
 .step-n {
@@ -633,6 +640,28 @@ input:focus, textarea:focus { outline: 3px solid var(--cyan); outline-offset: 1p
 .footer-nav { display: flex; flex-wrap: wrap; gap: 0.75rem 1.1rem; }
 .footer-nav a { color: var(--navy); font-weight: 600; text-decoration: none; }
 .footer-nav a:hover { box-shadow: inset 0 -2px 0 var(--cyan); }
+.footer-legal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem 1rem;
+  margin-top: 0.85rem;
+}
+.footer-legal a { color: var(--muted); font-weight: 600; font-size: 0.92rem; text-decoration: none; }
+.footer-legal a:hover { color: var(--navy); box-shadow: inset 0 -2px 0 var(--cyan); }
+
+.legal { padding: clamp(1.6rem, 4vw, 3rem) 0 4rem; }
+.legal h1 { max-width: 16ch; margin-bottom: 0.55rem; }
+.legal .updated { color: var(--muted); margin-bottom: 1.5rem; }
+.legal h2 {
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  max-width: none;
+  margin: 1.7rem 0 0.45rem;
+}
+.legal p, .legal li { max-width: 68ch; }
+.legal p + p { margin-top: 0.7rem; }
+.legal ul { margin: 0.35rem 0 0; padding-left: 1.15rem; }
+.legal li { margin: 0.28rem 0; }
+.legal a { color: var(--navy); font-weight: 600; }
 
 @media (max-width: 960px) {
   .hero, .offer-panel, .who-grid, .method-grid, .sheet, .contact-grid, .section-head {

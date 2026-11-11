@@ -26,9 +26,9 @@
         <a href="#offre">Offre</a>
         <a href="#pour-qui">Pour qui</a>
         <a href="#methode">Méthode</a>
-        <a class="nav-mobile-cta" href="#contact">Demander un appel</a>
+        <a class="nav-mobile-cta" href="#contact">Parler d'un projet</a>
       </nav>
-      <a class="btn btn-primary nav-cta" href="#contact">Demander un appel</a>
+      <a class="btn btn-primary nav-cta" href="#contact">Parler d'un projet</a>
       <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
     </div>
   </header>
@@ -41,7 +41,7 @@
         <p class="lede">LeadBoy amène un flux régulier de rendez-vous aux entreprises de services. Des gens qui ont besoin de ce que tu vends. Pas d'appels à froid. Pas une liste de noms.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#contact">
-            Demander un appel
+            Parler d'un projet
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
           <a class="btn btn-ghost" href="#methode">Voir la méthode</a>
@@ -287,8 +287,8 @@
         <div class="section-head">
           <p class="kicker">07 — Contact</p>
           <div>
-            <h2 id="contact-title">Parle-nous de ce que tu vends.</h2>
-            <p>Un appel, pas un devis flou. On veut comprendre ton offre, ton client idéal et ton objectif.</p>
+            <h2 id="contact-title">Parle-nous de ton entreprise.</h2>
+            <p>Nom, entreprise, domaine, courriel et téléphone. Le site web et les objectifs sont facultatifs. Le courriel et le téléphone de LeadBoy seront ajoutés ici dès que tu les auras. D'ici là, le formulaire reste sur ton appareil : LeadBoy ne le reçoit pas.</p>
           </div>
         </div>
         <div class="contact-grid">
@@ -305,18 +305,13 @@
                 <p class="err"></p>
               </div>
               <div class="field field-wide">
-                <label for="service">Le service que tu vends</label>
-                <input id="service" name="service" type="text" required>
+                <label for="site">Site web (facultatif)</label>
+                <input id="site" name="site" type="text" autocomplete="url" inputmode="url" placeholder="exemple.com">
                 <p class="err"></p>
               </div>
               <div class="field field-wide">
-                <label for="client">Ton client idéal</label>
-                <textarea id="client" name="client" required></textarea>
-                <p class="err"></p>
-              </div>
-              <div class="field field-wide">
-                <label for="objectif">Ton objectif</label>
-                <textarea id="objectif" name="objectif" required></textarea>
+                <label for="domaine">Domaine</label>
+                <input id="domaine" name="domaine" type="text" required placeholder="Services, secteur, dans quel domaine">
                 <p class="err"></p>
               </div>
               <div class="field">
@@ -327,6 +322,11 @@
               <div class="field">
                 <label for="telephone">Téléphone</label>
                 <input id="telephone" name="telephone" type="tel" autocomplete="tel" inputmode="tel" required>
+                <p class="err"></p>
+              </div>
+              <div class="field field-wide">
+                <label for="autres">Autres (objectifs, facultatif)</label>
+                <textarea id="autres" name="autres"></textarea>
                 <p class="err"></p>
               </div>
               <div class="form-row">
@@ -355,6 +355,10 @@
       <div class="footer-brand">
         <img src="assets/brand/logo.png" alt="LeadBoy" width="440" height="126">
         <p>Prospects qualifiés pour entreprises de services. Québec.</p>
+        <nav class="footer-legal" aria-label="Informations légales">
+          <a href="confidentialite.html">Politique de confidentialité</a>
+          <a href="conditions.html">Termes et conditions</a>
+        </nav>
       </div>
       <nav class="footer-nav" aria-label="Pied de page">
         <a href="#services">Services</a>
